@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHome, faCreditCard, faMoneyBill, faChartBar } from '@fortawesome/free-solid-svg-icons';
 
 export default function FooterCards(props) {
-  // Mapeie o nome da propriedade do ícone para o ícone real
+  
   const iconMap = {
     home: faHome,
     card: faCreditCard,

@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import { View, TextInput, Text, StyleSheet, Alert, Image, TouchableOpacity } from 'react-native';
 import { LinearGradient } from 'expo-linear-gradient';
 import login from '../../assets/login.jpg';
-// Em seu componente de login (Login.js)
-// Certifique-se de passar `navigation` para o componente Login
+
 
 export default function LoginScreen({ onLogin }) {
   const [username, setUsername] = useState('');

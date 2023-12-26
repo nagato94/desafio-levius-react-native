@@ -45,7 +45,7 @@ export default function DetalhesCartaoScreen({ navigation }) {
 
           <Card title="Informações de Compras">
             {faturas
-              .filter((item) => !item.mes) // Filtra apenas as compras
+              .filter((item) => !item.mes)
               .map((compra, index) => (
                 <View key={index} style={styles.faturaItemContainer}>
                   <Text style={styles.faturaItemMes}>{compra.descricao} - R$ {compra.valor.toFixed(2)}</Text>
@@ -55,7 +55,7 @@ export default function DetalhesCartaoScreen({ navigation }) {
 
           <Card title="Faturas">
             {faturas
-              .filter((item) => item.mes) // Filtra apenas as faturas
+              .filter((item) => item.mes)
               .map((fatura, index) => (
                 <View key={index} style={styles.faturaItemContainer}>
                   <Text style={styles.faturaItemMes}>{fatura.mes} - R$ {fatura.valor.toFixed(2)}</Text>

@@ -105,15 +105,15 @@ export default function HomeScreen() {
       marginHorizontal: 10,
       marginTop: 12,
       shadowColor: "#000",
-      borderColor: "#fff", // Cor da borda
-      borderWidth: 1, // Largura da borda
+      borderColor: "#fff",
+      borderWidth: 1,
       shadowOffset: {
         width: 0,
-        height: 2, // Altura da sombra
+        height: 2,
       },
-      shadowOpacity: 0.25, // Opacidade da sombra
-      shadowRadius: 3.84, // Raio da sombra
-      elevation: 5, // Sombra no Android
+      shadowOpacity: 0.25,
+      shadowRadius: 3.84,
+      elevation: 5,
 
     },
     cards: {
@@ -155,16 +155,16 @@ export default function HomeScreen() {
 
     },
     bannerImage: {
-      width: '100%', // Pode ajustar conforme necessário
-      height: '100%', // Pode ajustar conforme necessário
+      width: '100%',
+      height: '100%',
       resizeMode: 'cover',
-      borderRadius: 10, // ou 'contain' dependendo da preferência
+      borderRadius: 10,
     },
 
     footer: {
       width: '100%',
       height: 50,
-      backgroundColor: '#8e44ad', // Cor roxa escura para o rodapé
+      backgroundColor: '#8e44ad', 
       alignItems: 'center',
       justifyContent: 'space-between',
       flexDirection: 'row',

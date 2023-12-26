@@ -8,7 +8,7 @@ export default function CreditCard() {
   const navigation = useNavigation();
 
   const handleCardPress = () => {
-    // Navegar para a tela de detalhes do cartão de crédito
+
     navigation.navigate('DetalhesCartao');
   };
 
@@ -34,15 +34,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 70,
     elevation: 5,
-    borderColor: '#cccccc', // Cor da borda
-    borderWidth: 3, // Largura da borda
-    shadowColor: "#000", // Cor da sombra
+    borderColor: '#cccccc',
+    borderWidth: 3,
+    shadowColor: "#000",
     shadowOffset: {
       width: 0,
       height: 2,
     },
-    shadowOpacity: 1, // Opacidade da sombra
-    shadowRadius: 5, // Raio da sombra
+    shadowOpacity: 1, 
+    shadowRadius: 5,
   },
   creditCardTop: {
     backgroundColor: '#8e44ad',

@@ -23,7 +23,7 @@ export default function App() {
             <Stack.Screen
               name="Main"
               component={HomeScreen}
-              options={{ headerShown: false }} // Oculta o cabeçalho da tela principal
+              options={{ headerShown: false }} 
             />
             <Stack.Screen name="DetalhesCartao" component={DetalhesCartaoScreen} options={{ headerShown: false }}  />
 
@@ -31,6 +31,7 @@ export default function App() {
         ) : (
           <Stack.Screen
             name="Login"
+            options={{ headerShown: false }}
             children={()=><LoginScreen onLogin={handleLogin} />}
           />
         )}
