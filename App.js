@@ -9,7 +9,7 @@ import DetalhesCartaoScreen from './src/telas/DestalhesCartao';
 const Stack = createStackNavigator();
 
 export default function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(true);
+  const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLogin = () => {
     setIsLoggedIn(true);
@@ -31,8 +31,7 @@ export default function App() {
         ) : (
           <Stack.Screen
             name="Login"
-            component={LoginScreen}
-            initialParams={{ onLogin: handleLogin }}
+            children={()=><LoginScreen onLogin={handleLogin} />}
           />
         )}
       </Stack.Navigator>

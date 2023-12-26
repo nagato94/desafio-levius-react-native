@@ -14,7 +14,7 @@ export default function LoginScreen({ onLogin }) {
     if (username === 'kaique' && password === '123' || username === 'gustavo' && password === '123') {
       onLogin();
     } else {
-      Alert.alert('Erro', 'Usuário ou senha incorretos');
+      Alert.alert('Usuário ou senha inválidos');
     }
   };
 
