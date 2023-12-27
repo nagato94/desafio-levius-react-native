@@ -20,6 +20,10 @@ export default function DetalhesCartaoScreen({ navigation }) {
     { descricao: 'Compra Online ABC', valor: 150.0 },
     { descricao: 'Compra Online XXX', valor: 150.0 },
     { descricao: 'Compra Online XXX', valor: 150.0 },
+    { descricao: 'Compra Online XXX', valor: 150.0 },
+    { descricao: 'Compra Online XXX', valor: 150.0 },
+    { descricao: 'Compra Online XXX', valor: 150.0 },
+    
     { mes: 'Janeiro 2023', valor: 1200.0 },
     { mes: 'Fevereiro 2023', valor: 1500.0 }
   ];

@@ -1,7 +1,7 @@
 // Home.js
 import React from 'react';
 import { useState } from 'react';
-import { View, StyleSheet, Text, Image, ScrollView } from 'react-native'; // Adicionei ScrollView
+import { View, StyleSheet, Text, Image, ScrollView, TouchableHighlight, TouchableOpacity } from 'react-native'; // Adicionei ScrollView
 import Card from '../components/Cards';
 import FooterCards from '../components/Footer';
 import logo from '../../assets/logo.png';
@@ -9,28 +9,37 @@ import CreditCard from '../components/CreditCard';
 import banner from '../../assets/banner.jpg';
 import Saldo from '../components/Saldo';
 
-export default function HomeScreen() {
+export default function HomeScreen({navigation}) {
   const [showSaldo, setShowSaldo] = useState(true);
 
   const toggleSaldoVisibility = () => {
     setShowSaldo(!showSaldo);
   };
 
+  const handlePixNavigation = () => {
+    navigation.navigate('Pix'); // Navega para a tela Pix
+  };
+
+
+  const handleCartaoNavigation = () => {
+    navigation.navigate('DetalhesCartao'); // Navega para a tela DetalhesCartao
+  };
+
   return (
     <View style={{ flex: 1, backgroundColor: '#E5D4FF' }}>
-    <ScrollView contentContainerStyle={styles.container} >
       <View style={styles.header}>
         <Image source={logo} style={styles.logo} />
         <Text style={styles.textHeader}>Future Bank</Text>
       </View>
+      <ScrollView style={styles.scrollContainer}>
       <View style={styles.banner}>
         <Image source={banner} style={styles.bannerImage}></Image>
       </View>
       <View style={styles.content}>
         <View style={styles.saldoAreaPixContainer}>
-          <View style={styles.pixCard}>
+          <TouchableOpacity style={styles.pixCard} onPress={handlePixNavigation}>
             <Text style={styles.textPix}>Área Pix</Text>
-          </View>
+          </TouchableOpacity>
           <CreditCard />
         </View>
         <View style={styles.cards}>
@@ -46,8 +55,8 @@ export default function HomeScreen() {
 
       <View style={styles.footer}>
         <FooterCards iconName="home">Home</FooterCards>
-        <FooterCards iconName="card">Cartão</FooterCards>
-        <FooterCards iconName="pix">Pix</FooterCards>
+        <FooterCards iconName="card" onPress={handleCartaoNavigation}>Cartão</FooterCards>
+        <FooterCards iconName="pix" onPress={handlePixNavigation}>Pix</FooterCards>
         <FooterCards iconName="investments">Invest</FooterCards>
       </View>
     </ScrollView>
@@ -74,22 +83,7 @@ export default function HomeScreen() {
       marginBottom: 20,
     },
 
-    saldo: {
-      backgroundColor: '#ccc',
-      borderRadius: 10,
-      marginRight: 10,
-      marginBottom: 10,
-      alignItems: 'center',
-      marginVertical: 20,
-      width: '50%',
-    },
-    saldoContainer: {
-      flexDirection: 'row',
-      alignItems: 'center',
-    },
-    saldoValue: {
-      marginLeft: 10,
-    },
+
     textPix: {
       fontSize: 16,
       fontWeight: 'bold',
@@ -121,13 +115,14 @@ export default function HomeScreen() {
       flexWrap: 'wrap',
       alignItems: 'center',
       justifyContent: 'space-around',
+      marginBottom: 50,
+      marginTop: 10,
     },
     content: {
       justifyContent: 'center',
       alignItems: 'center',
-      marginVertical: 20,
       width: '100%',
-      height: 250,
+
     },
     header: {
       color: 'white',
@@ -164,11 +159,11 @@ export default function HomeScreen() {
     footer: {
       width: '100%',
       height: 50,
-      backgroundColor: '#8e44ad', 
+      backgroundColor: '#8e44ad',
       alignItems: 'center',
       justifyContent: 'space-between',
       flexDirection: 'row',
       paddingHorizontal: 10,
-      marginTop: 70,
+
     },
   });

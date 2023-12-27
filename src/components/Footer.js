@@ -1,10 +1,11 @@
+// FooterCards.js
 import React from "react";
-import { View, StyleSheet, Text } from "react-native";
+import { TouchableOpacity, StyleSheet, Text } from "react-native";
 import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
 import { faHome, faCreditCard, faMoneyBill, faChartBar } from '@fortawesome/free-solid-svg-icons';
 
-export default function FooterCards(props) {
-  
+export default function FooterCards({ iconName = 'home', onPress, children }) {
+
   const iconMap = {
     home: faHome,
     card: faCreditCard,
@@ -12,13 +13,11 @@ export default function FooterCards(props) {
     investments: faChartBar,
   };
 
-  const { iconName = 'home' } = props;
-
   return (
-    <View style={styles.footerCard}>
+    <TouchableOpacity onPress={onPress} style={styles.footerCard}>
       <FontAwesomeIcon icon={iconMap[iconName]} size={20} color="#8e44ad" />
-      <Text style={styles.footerText}>{props.children}</Text>
-    </View>
+      <Text style={styles.footerText}>{children}</Text>
+    </TouchableOpacity>
   );
 }
 
@@ -38,5 +37,4 @@ const styles = StyleSheet.create({
     textAlign: "center",
     fontWeight: "bold",
   },
-
 });

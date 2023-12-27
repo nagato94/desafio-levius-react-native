@@ -32,13 +32,14 @@ const styles = StyleSheet.create({
     marginRight: 10,
     marginBottom: 10,
     alignItems: 'center',
-    marginVertical: 20,
     width: '50%',
+
   },
   saldoContent: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'space-between',
+
   },
   saldoLabelText: {
     fontSize: 16,

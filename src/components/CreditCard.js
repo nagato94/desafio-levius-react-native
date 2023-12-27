@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
       width: 0,
       height: 2,
     },
-    shadowOpacity: 1, 
+    shadowOpacity: 1,
     shadowRadius: 5,
   },
   creditCardTop: {

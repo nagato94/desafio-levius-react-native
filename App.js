@@ -5,6 +5,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import HomeScreen from './src/telas/Home';
 import LoginScreen from './src/telas/Login';
 import DetalhesCartaoScreen from './src/telas/DestalhesCartao';
+import PixScreen from './src/telas/PixScreen';
+
 
 const Stack = createStackNavigator();
 
@@ -23,7 +25,7 @@ export default function App() {
             <Stack.Screen
               name="Main"
               component={HomeScreen}
-              options={{ headerShown: false }} 
+              options={{ headerShown: false }}
             />
             <Stack.Screen name="DetalhesCartao" component={DetalhesCartaoScreen} options={{ headerShown: false }}  />
 
@@ -34,7 +36,8 @@ export default function App() {
             options={{ headerShown: false }}
             children={()=><LoginScreen onLogin={handleLogin} />}
           />
-        )}
+          )}
+          <Stack.Screen name="Pix" component={PixScreen} options={{ headerShown: false }}  />
       </Stack.Navigator>
     </NavigationContainer>
   );
